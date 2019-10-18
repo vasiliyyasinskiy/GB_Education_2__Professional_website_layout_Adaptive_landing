@@ -1,0 +1,178 @@
+//======================Libs==========================//
+
+//======================Reset=========================//
+//reset
+
+* {
+  margin : 0;
+  padding: 0;
+  outline: 1px solid gray;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+//=====================Helpers========================//
+
+//mixins
+
+@mixin button_blue($bw) {
+  display         : block;
+  width           : $bw;
+  height          : 248px;
+  background-color: $color-blue;
+  font-size       : 16px;
+  line-height     : 19px;
+  text-align      : center;
+  text-transform  : uppercase;
+
+  &:hover {
+    box-shadow: 0 4px 15px rgba(27, 170, 235, 0.45);
+  }
+
+  &:active {
+    background-color: $color-white-blue;
+  }
+}
+
+
+@mixin button_orange($bw) {
+  display         : block;
+  width           : $bw;
+  height          : 248px;
+  background-color: $color-orange;
+  font-size       : 16px;
+  line-height     : 19px;
+  text-align      : center;
+  text-transform  : uppercase;
+
+  &:hover {
+    box-shadow: 0 4px 20px rgba(255, 204, 0, 0.55);
+  }
+
+  &:active {
+    background-color: $color-white-orange;
+  }
+}
+
+//variables
+
+$color-blue        : #008DCD;
+$color-white-blue  : #94D1EC;
+$color-orange      : #FFCC00;
+$color-white-orange: #FCE39C;
+$color-dark-gray   : #363636;
+$color-gray        : #B3B3B3;
+$color-white-gray  : #E1E1E1;
+$color-white       : #FFFFFF;
+
+
+//=====================Typography=====================//
+
+body {
+  font-family: 'Myriad Pro', sans-serif;
+}
+
+html {
+  font-size: 16px; //1rem
+}
+
+
+.container {
+  max-width    : 1366px;
+  padding-left : 26px;
+  padding-right: 26px;
+  margin       : 0 auto;
+}
+
+h1 {
+  font-size  : 48px;
+  font-weight: 900;
+}
+
+
+h2 {
+  font-size  : 36px;
+  font-weight: bold;
+}
+
+
+h3 {
+  font-size  : 30px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+}
+
+//screen
+
+
+//Smartphones (vert)
+@media screen and (max-width: 768px) {
+
+  .header {   
+    background-position: right;
+    
+  }
+}
+
+//iPads (vert)
+@media screen and (min-width: 768px) and (max-width: 1224px) {
+
+  .header {       
+    background-position-x: -700px;
+  }
+}
+
+//PC
+@media screen and (min-width: 1224px) {
+
+  .header {    
+    background-color: green;
+  }
+}
+
+
+//=======================Blocks========================//
+
+//buttons
+
+//header
+
+
+
+
+.top {
+  height        : 100vh;
+  display       : flex;
+  flex-direction: column;
+
+  &-parent {
+    background-color: #F7F7F7;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+}
+
+
+.header {
+  background-image : url("../img/header-bg.jpg");
+  height             : 50vh;
+  background-repeat: no-repeat;  
+  
+}
+
+.nav {
+  margin-top     : 27px;
+  min-height     : 29px;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+}
