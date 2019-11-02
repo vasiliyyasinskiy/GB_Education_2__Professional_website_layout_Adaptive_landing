@@ -118,25 +118,19 @@ p {
 //Smartphones (vert)
 @media screen and (max-width: 768px) {
 
-  .header {
-    background-position: 80% 80%;
-  }
+ 
 }
 
 //iPads (vert)
 @media screen and (min-width: 768px) and (max-width: 1224px) {
 
-  .header {
-    background-position: 80% 80%;
-  }
+
 
 }
 
 //PC
 @media screen and (min-width: 1224px) {
-  .header {
-    background-position: 80% 80%;
-  }
+
 }
 
 
@@ -170,6 +164,7 @@ p {
   background-repeat: no-repeat;
   background-size  : cover;
   margin           : 0;
+  background-position: 80% 80%;
 }
 
 .nav {
